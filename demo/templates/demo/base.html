@@ -1,0 +1,40 @@
+{% load static%} <!photo insert karne k lea jinja file>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"  href="{%  static  'css/ba.css'  %}">
+        
+        <title>Document</title>
+    </head>
+
+    <body>
+       
+        <div class="ok">
+            <img src="{% static 'C:\enviroment\h\demo\image\logo.svg' %}">
+            <a href="{% url 'demo:create' %}">
+                <h4 id="hey">Create</h4>
+            </a>
+            <a href="">
+                <h4 id="he" >Edit</h4>
+            </a>
+            <a href="{% url 'demo:table' %}">
+                <h4 id="h">Employe List</h4>
+            </a>
+        </div>
+        <div style="height:100px; ">
+        <h3>Total number of employee: {{c}}</h3>
+    </div >
+        <div id="l" style="background-color:rgb(114, 122, 153); height:100px; width:1500px; margin-top:310px; "></div>
+        
+
+
+       
+      
+        
+    </body>
+
+    </html>

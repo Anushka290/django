@@ -1,0 +1,43 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet"  href="{%  static  'css/ta.css'  %}">
+    <title>Document</title>
+    
+</head>
+<body>
+  {% block content%}
+  <div style="background-color: rgb(127, 172, 255);"> <img src="{% static 'C:\enviroment\h\demo\image\logo.svg' %}"></div>
+    <div id="mm"><table style="text-align: center",class="gridtable">
+        <tr>
+          <th style="width: 100px">Name</th>
+          <th style="width: 100px">DOB</th>
+          <th style="width: 100px">Date of joining</th>
+          <th style="width: 100px"> Department</th>
+          <th style="width: 100px">Designation</th>
+          <th style="width: 100px">City</th>
+          <th style="width: 100px">Country</th>
+          <th style="width: 100px">Leaves</th>
+          <th>No.of Leaves</th>
+
+        </tr>
+      
+        {% for i in k %}
+        <tr>
+          
+          <td>{{i.name}}</td>
+          <td>{{i.DOB}}</td>
+          <td>{{i.DOJ}}</td>
+          <td>{{i.Department}}</td>
+          <td>{{i.post}}</td>
+          <td>{{i.City}}</td>
+          <td>{{i.Country}}</td>
+         <td><a href="{% url 'updateOrder' 2 %}">hell</a></td>
+        </tr>
+        
+        {% endfor %}
+      </table></div>
+      {% endblock %}
+</body>
+</html>

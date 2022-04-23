@@ -1,0 +1,32 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="{%  static  'css/ce.css'  %}">
+    <title>Register</title>
+</head>
+<body>
+    
+    <div style="background-color: rgb(127, 172, 255);"> <img src="{% static 'C:\enviroment\h\demo\image\logo.svg' %}"></div>
+    <div id="edit">
+    
+        <form method="post">
+            {% csrf_token %}
+            <input style="margin-bottom: 20px; margin-left:200px;margin-top: 100px; " type="text" name="name" placeholder="Name" style="margin-right: 200px;margin: bottom 70px;"/>
+            <input style="margin-bottom: 20px;" type="text" name="DOB" placeholder="DOB" style="margin-right: 200px;"/><br>
+            <input style="margin-bottom: 20px;margin-left:200px;" type="text" name="DOJ" placeholder="DOJ" style="margin-right: 200px;"/>
+            <input style="margin-bottom: 20px;" type="text" name="Department" placeholder="Department" style="margin-right: 200px;"/><br>
+            <input style="margin-bottom: 20px;margin-left:200px;" type="text" name="post" placeholder="Post" style="margin-right: 200px;"/>
+            <input style="margin-bottom: 20px;" type="text" name="Adress" placeholder="Adress" style="margin-right: 200px;"/><br>
+            <input style="margin-bottom: 20px;margin-left:200px;"type="text" name="City" placeholder="City" style="margin-right: 200px;"/>
+            <input style="margin-bottom: 20px;"type="text" name="Country" placeholder="Country" style="margin-right: 200px;"/><br>
+            <input style=" margin-bottom: 100px;margin-left:340px;" type="submit" value="Submit" />
+        </form>
+    
+    </div>
+</body>
+</html>
