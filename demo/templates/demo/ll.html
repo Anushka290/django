@@ -1,0 +1,27 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Document</title>
+</head>
+<body>
+	<div style="background-color: rgb(127, 172, 255);"> <img src="{% static 'C:\enviroment\h\demo\image\logo.svg' %}"></div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="card card-body">
+				<form method="post">
+				<p>Are you sure you want to take leave ?</p>
+					{% csrf_token %}
+					<a class="btn btn-warning" href="{% url 'demo:table' %}">Cancel</a>
+	
+					<input class="btn btn-danger" type="submit" href="{% url 'demo:table' %}" name= "Confirm" />
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

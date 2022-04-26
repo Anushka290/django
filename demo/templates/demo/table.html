@@ -9,7 +9,7 @@
 <body>
   {% block content%}
   <div style="background-color: rgb(127, 172, 255);"> <img src="{% static 'C:\enviroment\h\demo\image\logo.svg' %}"></div>
-    <div id="mm"><table style="text-align: center",class="gridtable">
+  <div id="mm"><table style="text-align: center" class="gridtable">
         <tr>
           <th style="width: 100px">Name</th>
           <th style="width: 100px">DOB</th>
@@ -18,8 +18,10 @@
           <th style="width: 100px">Designation</th>
           <th style="width: 100px">City</th>
           <th style="width: 100px">Country</th>
-          <th style="width: 100px">Leaves</th>
-          <th>No.of Leaves</th>
+          <th style="width: 100px">No. of leaves</th>
+          <th style="width: 100px">Leave</th>
+          <th style="width: 100px">Update</th>
+          <th style="width: 100px">Delete</th>
 
         </tr>
       
@@ -33,7 +35,18 @@
           <td>{{i.post}}</td>
           <td>{{i.City}}</td>
           <td>{{i.Country}}</td>
-         <td><a href="{% url 'updateOrder' 2 %}">hell</a></td>
+          <td>{{i.blog_views}}</td>
+         
+          <td> 
+          {% if i.my_field == True %}
+            <a href="{% url 'demo:leave' i.id %}" style="background-color:rgb(207, 247, 226)" >Working</a>
+        
+            {% else %}
+            <a href="{% url 'demo:leave' i.id %}" style="background-color:rgb(207, 247, 226)" >Leave</a>{% endif %}
+         </td>
+          <td><a href="{% url 'demo:updateOrder' i.id %}" style="background-color:rgb(244, 254, 172)">Edit</a></td>
+         
+          <td><a href="{% url 'demo:delete_order' i.id %}" style="background-color:rgb(252, 226, 219)">Delete</a></td>
         </tr>
         
         {% endfor %}

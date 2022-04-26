@@ -16,9 +16,10 @@
     
         <form method="post">
             {% csrf_token %}
+           
             <input style="margin-bottom: 20px; margin-left:200px;margin-top: 100px; " type="text" name="name" placeholder="Name" style="margin-right: 200px;margin: bottom 70px;"/>
-            <input style="margin-bottom: 20px;" type="text" name="DOB" placeholder="DOB" style="margin-right: 200px;"/><br>
-            <input style="margin-bottom: 20px;margin-left:200px;" type="text" name="DOJ" placeholder="DOJ" style="margin-right: 200px;"/>
+            <input style="margin-bottom: 20px;" type="text" name="DOB"  placeholder="DOB" onfocus="(this.type='date')" style="margin-right: 200px;" /><br>
+            <input style="margin-bottom: 20px;margin-left:200px;"  type="text" name="DOJ" onfocus="(this.type='date')" placeholder="DOJ" style="margin-right: 200px;"/>
             <input style="margin-bottom: 20px;" type="text" name="Department" placeholder="Department" style="margin-right: 200px;"/><br>
             <input style="margin-bottom: 20px;margin-left:200px;" type="text" name="post" placeholder="Post" style="margin-right: 200px;"/>
             <input style="margin-bottom: 20px;" type="text" name="Adress" placeholder="Adress" style="margin-right: 200px;"/><br>
