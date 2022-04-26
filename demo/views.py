@@ -132,5 +132,3 @@ def leave(request,pk):
        
     blog_object.save()
     return redirect('/table') 
-def k(request):
-    return render(request, 'demo/ll.html')
